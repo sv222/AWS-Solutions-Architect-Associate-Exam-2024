@@ -1,5 +1,7 @@
 # AWS Certified Solutions Architect Associate (SAA-C03) Cheatsheet
 
+![AWS Certified Solutions Architect Associate (SAA-C03) Cheatsheet](/extras/AWS_Certified_Solutions_Architect_Associate_SAA_C03_Cheatsheet_logo.png)
+
 This repository contains a cheatsheet with key information to help you prepare for the AWS Certified Solutions Architect Associate (SAA-C03) exam.
 
 This cheatsheet summarizes important services, concepts, and best practices tested in the exam. It can be used as a quick reference guide for studying. 
