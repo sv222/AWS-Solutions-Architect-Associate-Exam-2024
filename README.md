@@ -51,7 +51,7 @@ Here is some short information about Amazon EC2 that you will need to know to pa
 
 - EC2 instances are virtual machines that run in the cloud.
 - EC2 instances are billed by the hour or by the second. 
-- EC2 instances can be launched in any of the AWS Availability Zones, which are geographically isolated from each other.
+- EC2 instances can be launched in any of the AWS Regions and Availability Zones, which are geographically isolated from each other.
 - EC2 instances can be scaled up or down on demand, so you can easily add or remove capacity as needed.
 - EC2 instances can be used to host a wide variety of applications, including web applications, databases, and application servers.
 
@@ -76,7 +76,7 @@ Amazon ECS is a highly scalable, high-performance container orchestration servic
 Here is some short information about Amazon ECS that you will need to know to pass the AWS Certified Solutions Architect Associate exam:
 
 - ECS is a highly scalable, high-performance container orchestration service.  
-- ECS supports Docker containers and Kubernetes.
+- ECS supports Docker containers.
 - ECS provides a variety of features to help you manage your containerized applications, including service discovery, load balancing, health monitoring, and auto scaling.
 
 Here are some additional details about Amazon ECS that you may want to know:
@@ -112,7 +112,7 @@ ECR is a powerful tool for managing container images. It is easy to use and it p
 
 ## Amazon Elastic Kubernetes Service (EKS)
 
-Amazon EKS is a fully managed Kubernetes service that makes it easy to deploy, manage, and scale Kubernetes applications on AWS. EKS provides a Kubernetes API server, a Kubernetes control plane, and Kubernetes worker nodes. EKS also provides a variety of features to help you manage your Kubernetes applications, including:
+Amazon EKS is a fully managed Kubernetes service that makes it easy to deploy, manage, and scale Kubernetes applications on AWS. EKS provides Kubernetes worker nodes, while the control plane is managed by AWS. EKS also provides a variety of features to help you manage your Kubernetes applications, including:
 
 - **Kubernetes orchestration:** EKS automatically provisions and manages Kubernetes clusters, so you can focus on building and running your applications.
 - **Security:** EKS provides a variety of security features to help you protect your Kubernetes applications, including encryption, authentication, and authorization.  
@@ -135,7 +135,7 @@ EKS is a powerful tool for managing Kubernetes applications. It is easy to use a
 
 ## AWS Lambda
 
-AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. Lambda executes your code only when needed and scales automatically, so you can focus on your code and not on managing infrastructure. Lambda supports a variety of programming languages, including Node.js, Python, Java, Go, and C#.
+AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. Lambda executes your code only when needed and scales automatically, so you can focus on your code and not on managing infrastructure. Lambda supports a variety of programming languages, including Node.js, Python, Java, Go, C#, Ruby and .NET.
 
 Here is some short information about AWS Lambda that you will need to know to pass the AWS Certified Solutions Architect Associate exam:
 
@@ -299,7 +299,7 @@ Elastic Block Store (EBS) is a block-level storage service designed for use with
 EBS volumes are available in four different volume types:
 
 - **Magnetic (Standard):** Magnetic volumes are the most cost-effective EBS volume type. They are well-suited for applications that require high throughput and low latency, such as web servers and databases.
-- **General Purpose SSD (gp2):** General purpose SSD volumes are a good balance between cost and performance. They are well-suited for applications that require a mix of throughput and IOPS, such as application servers and game servers.  
+- **General Purpose SSD (gp2):** General purpose SSD volumes are a good balance between cost and performance. They are well-suited for applications that require a mix of throughput and IOPS, such as application servers and game servers.
 - **Provisioned IOPS SSD (io1):** Provisioned IOPS SSD volumes provide sustained performance for mission-critical low-latency workloads. They are well-suited for applications that require high IOPS, such as relational databases and NoSQL databases.  
 - **Throughput Optimized HDD (st1):** Throughput optimized HDD volumes are designed for workloads that require high throughput, such as data lakes and log processing.
 
@@ -477,7 +477,7 @@ Amazon API Gateway is a fully managed service that makes it easy to create, publ
 Here is some short information about API Gateway that you will need to know to pass the AWS Certified Solutions Architect Associate exam:
 
 - API Gateway is a fully managed service, so you don't have to worry about provisioning, managing, or scaling your API infrastructure.
-- API Gateway supports REST APIs.
+- API Gateway supports REST APIs and WebSocket APIs.
 - API Gateway provides a variety of features to help you manage your APIs, including authorization and authentication, monitoring, caching, and versioning.
 - API Gateway can be used to create APIs that access data, applications, and services hosted on AWS or on-premises.
 
@@ -546,7 +546,7 @@ AWS CloudTrail is a service that enables governance, compliance, operational aud
 Here is some short information you will need to pass the AWS Certified Solutions Architect Associate exam:
 
 - CloudTrail is a fully managed service that continuously logs all API calls made to your AWS account and your resources.
-- CloudTrail logs can be delivered to Amazon S3, CloudWatch Logs, or Kinesis Data Streams.  
+- CloudTrail logs can be delivered to Amazon S3, CloudWatch Logs.
 - CloudTrail logs can be used to track user activity, troubleshoot problems, and audit your AWS environment.
 - CloudTrail logs can be retained for up to two years.
 
@@ -570,6 +570,7 @@ Here is some short information you will need to pass the AWS Certified Solutions
 
 - IAM is a fully managed service that enables you to securely control access to AWS services and resources.  
 - IAM uses users, groups, and roles to manage access to AWS resources.
+- IAM uses identity-based policies, resource-based policies, and access control lists to manage access to AWS resources. Users, groups, and roles are identity-based policies.
 - IAM users are individual people who are authorized to use AWS services and resources.
 - IAM groups are collections of IAM users who are assigned the same permissions.
 - IAM roles are sets of permissions that can be assigned to IAM users or groups.
@@ -602,6 +603,7 @@ Here is some short information you will need to pass the AWS Certified Solutions
 - KMS is a managed service that makes it easy to create and control the cryptographic keys that are used to protect your data.
 - KMS provides a range of features that make it easy to manage your keys securely, including key generation, key storage, key rotation, and key auditing.
 - KMS can be used to encrypt data at rest and in transit.
+- KMS encrypts data up to 4KB in size per call. For larger data, use envelope encryption with AWS Encryption SDK.
 - KMS can be used to manage keys for a variety of AWS services, including Amazon S3, Amazon RDS, and Amazon EBS.
 
 Here are some additional details that you may want to know:
@@ -766,6 +768,8 @@ AWS cost optimization strategies help you reduce your AWS costs without sacrific
 - **Use reserved instances:** Reserved instances are a commitment to use a specific AWS resource for a period of one or three years. In return, you receive a significant discount on the hourly rate of the resource.
 
 - **Use spot instances:** Spot instances are unused Amazon EC2 capacity that is available at a significant discount off the on-demand price.
+
+- **Use AWS Cost Explorer:** to analyze, monitor, and forecast your costs.
 
 - **Monitor your costs:** AWS provides a variety of tools to help you monitor your costs and identify areas where you can save money.
 
