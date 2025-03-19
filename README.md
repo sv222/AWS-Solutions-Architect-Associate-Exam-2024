@@ -62,22 +62,31 @@ The information is organized into the following sections:
 
 ## Amazon Elastic Compute Cloud (EC2)
 
-Amazon EC2 is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make it easy for you to deploy and manage applications of all sizes, from the simplest web app to the most complex enterprise application. EC2 provides a broad selection of instance types optimized for different workloads, so you can choose the instance that best meets your needs.
+Amazon EC2 provides secure, resizable compute capacity in the cloud. Key exam concepts:
 
-Here is some short information about Amazon EC2 that you will need to know to pass the AWS Certified Solutions Architect Associate exam:
+- **Instance Types**:
+  - General Purpose (M7g with Graviton3, T4g ARM-based)
+  - Compute Optimized (C7g)
+  - Memory Optimized (R7iz with Intel Xeon Scalable)
+  - Accelerated Computing (VT1 for video transcoding)
+  - Storage Optimized (Im4gn/Is4gen NVMe SSD)
 
-- EC2 instances are virtual machines that run in the cloud.
-- EC2 instances are billed by the hour or by the second. 
-- EC2 instances can be launched in any of the AWS Regions and Availability Zones, which are geographically isolated from each other.
-- EC2 instances can be scaled up or down on demand, so you can easily add or remove capacity as needed.
-- EC2 instances can be used to host a wide variety of applications, including web applications, databases, and application servers.
+- **Pricing Models**:
+  - On-Demand (short-term needs)
+  - Savings Plans (1-3 year commitment)
+  - Spot Instances (up to 90% discount)
+  - Reserved Instances (capacity reservation)
 
-Here are some additional details about Amazon EC2 that you may want to know:
+- **Advanced Features**:
+  - Nitro System (enhanced security & performance)
+  - Elastic Fabric Adapter (HPC networking)
+  - Capacity Blocks for ML (reserved GPU capacity)
+  - EC2 Instance Connect for browser-based SSH
 
-- EC2 instances can be launched from a variety of Amazon Machine Images (AMIs), which are preconfigured templates that include an operating system and other software.
-- EC2 instances can be grouped together into security groups, which control access to the instances.  
-- EC2 instances can be launched in a variety of VPCs (virtual private clouds), which provide a secure and isolated network environment for your instances.
-- EC2 instances can be monitored and managed using the AWS Management Console, the AWS CLI, or the AWS SDKs.
+- **Best Practices**:
+  - Use Instance Metadata Service (IMDSv2)
+  - Enable Detailed Monitoring for <1-minute metrics
+  - Leverage Placement Groups for low-latency apps
 
 EC2 is a core service in AWS, and it is used by millions of customers around the world. It is a powerful and flexible tool that can be used to build and run a wide variety of applications.
 
@@ -304,7 +313,7 @@ Here are some additional details about Amazon S3 that you may want to know:
 - S3 stores data in buckets, which are logical containers for your data.
 - S3 objects are uniquely identified by a key (name) and a version ID (if versioning is enabled).  
 - S3 objects can be up to 5 TB in size.
-- S3 offers a variety of storage classes to meet your needs, including Standard, Standard-IA, Glacier, and Glacier Deep Archive.
+- S3 offers a variety of storage classes to meet your needs, including Standard, Standard-IA, Glacier Instant Retrieval, Glacier Flexible Retrieval, and Glacier Deep Archive.
 - S3 can be integrated with a variety of other AWS services, such as Amazon EC2, Amazon CloudFront, and Amazon Lambda.
 
 Amazon S3 is a powerful tool for storing and retrieving any amount of data. It is easy to use and provides a variety of features to help you manage your data securely, reliably, and efficiently.
@@ -313,12 +322,13 @@ Amazon S3 is a powerful tool for storing and retrieving any amount of data. It i
 
 Elastic Block Store (EBS) is a block-level storage service designed for use with Amazon Elastic Compute Cloud (EC2) instances. EBS volumes provide persistent storage for applications running on EC2 instances. EBS volumes are replicated within the Availability Zone in which they are created to protect against data loss.  
 
-EBS volumes are available in four different volume types:
+EBS volumes are available in five volume types:
 
-- **Magnetic (Standard):** Magnetic volumes are the most cost-effective EBS volume type. They are well-suited for applications that require high throughput and low latency, such as web servers and databases.
-- **General Purpose SSD (gp2):** General purpose SSD volumes are a good balance between cost and performance. They are well-suited for applications that require a mix of throughput and IOPS, such as application servers and game servers.
-- **Provisioned IOPS SSD (io1):** Provisioned IOPS SSD volumes provide sustained performance for mission-critical low-latency workloads. They are well-suited for applications that require high IOPS, such as relational databases and NoSQL databases.  
-- **Throughput Optimized HDD (st1):** Throughput optimized HDD volumes are designed for workloads that require high throughput, such as data lakes and log processing.
+- **General Purpose SSD (gp3):** Latest generation SSD with baseline 3,000 IOPS and 125 MB/s throughput, scalable to 16,000 IOPS and 1,000 MB/s. Cost-effective for most workloads (default since 2020)
+- **Provisioned IOPS SSD (io2):** High-performance SSD for mission-critical apps (up to 256K IOPS per volume with 1,000:1 IOPS:GB ratio). Supports Multi-Attach
+- **Throughput Optimized HDD (st1):** Low-cost HDD for frequently accessed data (500 MB/s per volume, 40 MB/s per TB baseline)
+- **Cold HDD (sc1):** Lowest cost HDD for less frequently accessed data (250 MB/s per volume, 12 MB/s per TB baseline)
+- **gp2 (Legacy):** Previous generation general purpose SSD being phased out (3 IOPS per GB baseline)
 
 EBS volumes can be attached to EC2 instances at any time, and they can be resized up or down without downtime. EBS volumes can also be used to create snapshots, which are point-in-time copies of an EBS volume. Snapshots can be used to create new EBS volumes, or to restore an EBS volume to a previous state.
 
@@ -637,7 +647,16 @@ Example use cases of KMS:
 
 ## AWS Security Hub  
 
-AWS Security Hub is a cloud security posture management service that provides a comprehensive view of your security state across AWS accounts, services, and supported third-party products. Security Hub collects findings from a variety of sources, including Amazon GuardDuty, Amazon Inspector, Amazon Macie, and AWS IAM Access Analyzer, and prioritizes them based on severity and risk. Security Hub also provides recommendations for remediation, so that you can quickly and easily address any security issues.
+AWS Security Hub provides centralized security governance across AWS accounts with these key exam-relevant features:
+
+- **Compliance Standards**:
+  - PCI DSS v4.0 (2023 update) with 64 controls
+  - AWS Foundational Security Best Practices (FSBP)
+  - CIS AWS Foundations Benchmark
+- **Automated Findings Correlation**: Groups related findings from GuardDuty, Inspector, Macie, etc.
+- **Security Score**: Quantitative measure of compliance status
+- **Cross-Region/Account Aggregation**: Central view of security posture
+- **Integration with AWS Organizations**: Manage security at scale
 
 Here is some short information you will need to pass the AWS Certified Solutions Architect Associate exam:
 
@@ -654,9 +673,10 @@ Here are some additional details that you may want to know:
 
 Example use cases of Security Hub:
 
-- **Identify and remediate security issues:** Security Hub can be used to identify and remediate security issues across your AWS accounts, services, and supported third-party products.
-- **Meet compliance requirements:** Security Hub can be used to meet compliance requirements, such as PCI DSS and HIPAA.
-- **Improve your security posture:** Security Hub can be used to improve your security posture by identifying and remediating security issues, and by meeting compliance requirements.
+- **Identify and remediate security issues:** Security Hub aggregates findings across 30+ AWS security services and 70+ partner solutions
+- **Meet compliance requirements:** Automated compliance checks for PCI DSS v4.0, HIPAA, and ISO 27001
+- **Security Automation:** Integrated with AWS Systems Manager Automation for auto-remediation workflows
+- **Cost Management:** Identifies security-related cost optimization opportunities
 
 ## AWS CloudFormation
 
