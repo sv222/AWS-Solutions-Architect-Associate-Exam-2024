@@ -1,6 +1,6 @@
 # AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide
 
-![AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide](/extras/AWS_Certified_Solutions_Architect_Associate_SAA_C03_reference guide_logo.png)
+![AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide](/extras/AWS_Certified_Solutions_Architect_Associate_SAA_C03_Cheatsheet_logo.png)
 
 This repository contains a reference guide with key information to help you prepare for the AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) exam, updated for 2025.
 
