@@ -1,8 +1,8 @@
-# AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide
+# AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide [2025]
 
 ![AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide](/extras/AWS_Certified_Solutions_Architect_Associate_SAA_C03_Cheatsheet_logo.png)
 
-This repository contains a reference guide with key information to help you prepare for the AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) exam, updated for 2025.
+This repository contains a reference guide with key information to help you prepare for the AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) exam, **updated for 2025**.
 
 ![AWS Services MAP](/extras/aws_services_map.jpg)
 
@@ -12,7 +12,7 @@ The information is organized into the following sections:
 
 ## Table of Contents
 
-- [AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide](#aws-certified-solutions-architect-associate-SAA-C03/SAA-C04-reference guide)
+- [AWS Certified Solutions Architect Associate (SAA-C03/SAA-C04) reference guide](#aws-certified-solutions-architect-associate-saa-c03-saa-c04-reference-guide)
   - [Table of Contents](#table-of-contents)
   - [Amazon Elastic Compute Cloud (EC2)](#amazon-elastic-compute-cloud-ec2)
   - [Amazon Elastic Container Service (ECS)](#amazon-elastic-container-service-ecs)
